@@ -143,7 +143,7 @@ h2{
           <div class="member-info">
             <div class="member-info-content">
               <h4>IBRA DIONE</h4>
-              <span>Etudiant en lissence3 / UCAB</span>
+              <span>Etudi ant en lissence3 / UCAB</span>
             </div>
             <div class="social">
               
