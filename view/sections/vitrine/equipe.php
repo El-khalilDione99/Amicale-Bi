@@ -46,7 +46,7 @@
 </style>
 
 
-<section class="team-section text-center">
+<section class="team-section text-center" id="equipe">
     <div class="container">
         <h2 class="mb-5 text-dark">Notre Équipe</h2>
         <div class="row">
