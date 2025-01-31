@@ -24,15 +24,15 @@
 
      <!-- ======= Section faq ======= -->
      <div id="faq">
-        <?php
+         <?php
         require_once("view/sections/vitrine/faq.php")
         ?>
      </div>
-   
 
 
 
-     <!-- ======= Section equipe ======= -->
+
+     <!-- ======= Section Equipe ======= -->
      <?php require_once("view/sections/vitrine/equipe.php")?>
 
      <!-- ======= Section contact ======= -->
