@@ -53,7 +53,7 @@
             <!-- Membre 1 -->
             <div class="col-lg-3 col-md-6">
                 <div class="team-member">
-                    <img src="public/images/equipe/7e8203a2-441f-4953-8d62-99c585180799.jpg" alt="Membre 1">
+                    <img src="public/images/equipe/img2.jpg" alt="Membre 1">
                     <h5>Mourtada Seck</h5>
                     <p>Développeur Fullstack</p>
                     <div class="social-icons">
