@@ -66,7 +66,7 @@
             <!-- Membre 2 -->
             <div class="col-lg-3 col-md-6">
                 <div class="team-member">
-                    <img src="public/images/equipe/img2.jpg" alt="Membre 2">
+                    <img src="public/images/equipe/Dione99.png" alt="Membre 2">
                     <h5>Ibra Dione</h5>
                     <p>Designer UX/UI</p>
                     <div class="social-icons">
@@ -79,7 +79,7 @@
             <!-- Membre 3 -->
             <div class="col-lg-3 col-md-6">
                 <div class="team-member">
-                    <img src="public/images/equipe/img3.jpeg" alt="Membre 3">
+                    <img src="public/images/equipe/Habib.jpeg" alt="Membre 3">
                     <h5>Habib Cisse</h5>
                     <p>Ingénieur IA</p>
                     <div class="social-icons">
@@ -93,7 +93,7 @@
             <!-- Membre 4 -->
             <div class="col-lg-3 col-md-6">
                 <div class="team-member">
-                    <img src="public/images/equipe/img3.jpeg" alt="Membre 3">
+                    <img src="public/images/equipe/diaw.jpeg" alt="Membre 3">
                     <h5>Moustapha Diaw</h5>
                     <p>Ingénieur IA</p>
                     <div class="social-icons">
@@ -103,8 +103,19 @@
                     </div>
                 </div>
             </div>
-
-
+            <!-- Membre 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member">
+                    <img src="public/images/equipe/NMagete.jpeg" alt="Membre 3">
+                    <h5>Ndeye Maguét Ndiaye</h5>
+                    <p>Designer UX</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
