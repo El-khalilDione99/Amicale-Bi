@@ -28,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="public/templates/templateAdmin/assets/css/style.css" rel="stylesheet">
+  <link href="public/templates/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.0

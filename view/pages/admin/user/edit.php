@@ -6,7 +6,7 @@
 
   <?php
     require_once("../../../../model/userDB.php");
-    $user = getAlluser($_GET['idUser'])->fetch();
+    $user = getByIduser($_GET['idUser'])->fetch();
   ?>
 
 
@@ -66,7 +66,7 @@
                               <div class="row">
                                   <div class="col-lg-12">
                                       <label for="email" class="form-label">Email</label>
-                                      e <input required type="text" name="email" id="email" value="<?=$user['email']?>"
+                                      <input required type="text" name="email" id="email" value="<?=$user['email']?>"
                                           class="form-control">
                                   </div>
                               </div>
@@ -111,7 +111,7 @@
                               <!-- enregistrer -->
                               <div class="row">
                                   <div class="col-lg-12 mt-3">
-                                      <button type="submit" name="frmAddUser"
+                                      <button type="submit" name="frmEditUser"
                                           class="fw-bold btn btn-primary">Enrégistrer</button>
                                       <button type="reset" class="fw-bold btn btn-danger">Annuler</button>
                                   </div>

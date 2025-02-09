@@ -30,30 +30,70 @@ function getCorbeilleuser()
 
 function adduser($nom, $prenom, $adresse, $email, $telephone,  $photo, $role, $password)
 {
-
-    $date_Actuelle = date("Y-m-d");
-    $requete = "INSERT INTO users VALUES(null, '$nom',  '$prenom', '$photo', '$email', '$telephone',
-    '$adresse', '$role','$password',1, '$date_Actuelle', null, null, null, null, default)";
     try {
-        return getConnexion()->exec($requete); //exécution de la requette
-    } catch (Exception $error) {
-        die("Erreur lors de la recuperation de la liste des utilisateurs :" .$error->getMessage());
+        $pdo = new PDO('mysql:host=localhost;dbname=ucab_amical', 'root', '');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $date_Actuelle = date("Y-m-d");
+        $etat = 1;
+        $requete = $pdo->prepare("INSERT INTO users VALUES(null, :nom,  :prenom, :photo, :email, :telephone, :adresse, :role, :password, :etat, :date_Actuelle, null, null, null, null, null)");
+        $requete->bindParam(':etat', $etat);
+        $requete->bindParam(':nom', $nom);
+        $requete->bindParam(':photo', $photo);
+        $requete->bindParam(':prenom', $prenom);
+        $requete->bindParam(':adresse', $adresse);
+        $requete->bindParam(':email', $email);
+        $requete->bindParam(':password', $password);
+        $requete->bindParam(':telephone', $telephone);
+        $requete->bindParam(':role', $role);
+        $requete->bindParam(':date_Actuelle', $date_Actuelle);
+
+        if ($requete->execute()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    } catch (PDOException $e) {
+        echo "Erreur lors de l'ajout de la faq : " . $e->getMessage();
+        return 0;
     }
+
 }
 
 
 //permet de modifier une user dans la BD
 function edituser($id_user, $nom, $prenom, $adresse, $email, $telephone,  $photo, $role, $password)
 {
-    $date_Actuelle = date("Y-m-d");
-    $requete = "UPDATE users SET nom='$nom', prenom='$prenom',adresse='$adresse',email='$email',
-    telephone='$telephone', photo='$photo',role='$role', password='$password', 
-    updated_at='$date_Actuelle', updated_by=1 WHERE id_user='$id_user'";
+
     try {
-        return getConnexion()->exec($requete); //exécution de la requette
-    } catch (Exception $error) {
-        die("Erreur lors de la recuperation de la liste des utilisateurs :" .$error->getMessage());
-    } 
+        $pdo = new PDO('mysql:host=localhost;dbname=ucab_amical', 'root', '');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $date_Actuelle = date("Y-m-d");
+        $requete = $pdo->prepare("UPDATE users SET nom=:nom, prenom=:prenom,adresse=:adresse,email=:email,
+                                        telephone=:telephone, photo=:photo,role=:role, password=:password, 
+                                        updated_at=:date_Actuelle, updated_by=1 WHERE id_user=:id_user");
+        $requete->bindParam(':nom', $nom);
+        $requete->bindParam(':photo', $photo);
+        $requete->bindParam(':prenom', $prenom);
+        $requete->bindParam(':adresse', $adresse);
+        $requete->bindParam(':email', $email);
+        $requete->bindParam(':password', $password);
+        $requete->bindParam(':telephone', $telephone);
+        $requete->bindParam(':role', $role);
+        $requete->bindParam(':date_Actuelle', $date_Actuelle);
+        $requete->bindParam(':id_user', $id_user);
+
+        if ($requete->execute()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    } catch (PDOException $e) {
+        echo "Erreur lors de l'ajout de la faq : " . $e->getMessage();
+        return 0;
+    }
+
 }
 
 //permet d'activer une user dans la BD
