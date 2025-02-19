@@ -57,14 +57,13 @@
                                     <td>
                                         <a onclick="return confirm('Voulez-vous bien supprimer ?')"
                                             href="faqController?suppressions=1&id_faq=<?= htmlspecialchars($faqs['id_faq'])?>"
-                                            class="btn btn-danger fw-bold">Supprimer</a>
+                                            class="btn btn-danger fw-bold"><i class="fa fa-trash"></i></a>
 
                                         <a onclick="return confirm('Voulez-vous bien modifier ?')"
-                                             href="faqController?editions=<?= htmlspecialchars($faqs['id_faq'])?>&id_faq=<?= htmlspecialchars($faqs['id_faq'])?>"
-                                             
-                                            class="btn btn-warning fw-bold">Modifier</a>
+                                            href="faqController?editions=<?= htmlspecialchars($faqs['id_faq'])?>&id_faq=<?= htmlspecialchars($faqs['id_faq'])?>"
+                                            class="btn btn-warning fw-bold"><i class="fa fa-edit"></i></a>
 
-                                          
+
                                     </td>
                                 </tr>
                                 <?php } ?>

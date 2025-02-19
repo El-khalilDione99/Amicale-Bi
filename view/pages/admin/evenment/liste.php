@@ -68,9 +68,9 @@
                                       <td>
                                           <a onclick="return confirm('Voulez vous bien supprimer')"
                                               href="evenmentController?suppression=1&id_evenment=<?=$evenments['id_evenment']?>"
-                                              class="btn btn-danger fw-bold">Supprimer</a>
+                                              class="btn btn-danger fw-bold"><i class="fa fa-trash"></i></a>
                                           <a href="evenmentController?edition=<?= $evenments['id_evenment']?>&idEvenment=<?= $evenments['id_evenment']?>"
-                                              class="btn btn-warning fw-bold">Modifier</a>
+                                              class="btn btn-warning fw-bold"><i class="fa fa-edit"></i></a>
                                       </td>
                                   </tr>
                                   <?php

@@ -70,7 +70,7 @@
                                       <td>
                                           <a onclick="return confirm('Voulez vous bien supprimer')"
                                               href="galerieController?suppression=1&idGalerie=<?=$galeries['id_galerie']?>"
-                                              class="btn btn-danger fw-bold">Supprimer</a>
+                                              class="btn btn-danger fw-bold"><i class="fa fa-trash"></i></a>
                                       </td>
                                   </tr>
                                   <?php
