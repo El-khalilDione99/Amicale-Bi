@@ -18,7 +18,7 @@
                 <li><a href="#Contact">Contact</a></li>
                 <li><a href="Galariepage">Galerie</a></li>
 
-                <a href="login"><button type="button" class="btn btn-outline-success">Connexion</button></a>
+                <!-- <a href="login"><button type="button" class="btn btn-outline-success">Connexion</button></a> -->
 
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
