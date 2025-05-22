@@ -52,7 +52,15 @@
                                               src="public/images/<?= $galeries['photo']?>" alt="">
                                       </th>
                                       <td><?= $galeries['nom']?></td>
-                                      <td><?= $galeries['description']?></td>
+
+                                      <span>
+                                          <td data-toggle=" tooltip" data-placement="top" data-html="true"
+                                              title="<?= htmlspecialchars($galeries['description']) ?>">
+                                              <!-- Affichage de la description avec un maximum de 30 caractères -->
+                                              <?= htmlspecialchars(mb_substr($galeries['description'], 0, 30)) . (strlen($galeries['description']) > 30 ? "..." : "") ?>
+                                          </td>
+                                      </span>
+
                                       <td><?= $galeries['created_at']?></td>
                                       <td>
                                           <?php

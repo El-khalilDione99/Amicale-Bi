@@ -50,7 +50,15 @@
                                               src="public/images/<?= $evenments['photo']?>" alt="">
                                       </th>
                                       <td><?= $evenments['nom']?></td>
-                                      <td><?= $evenments['description']?></td>
+
+                                      <span>
+                                          <td data-toggle=" tooltip" data-placement="top" data-html="true"
+                                              title="<?= htmlspecialchars($evenments['description']) ?>">
+                                              <!-- Affichage de la description avec un maximum de 30 caractères -->
+                                              <?= htmlspecialchars(mb_substr($evenments['description'], 0, 30)) . (strlen($evenments['description']) > 30 ? "..." : "") ?>
+                                          </td>
+                                      </span>
+
                                       <td><?= $evenments['created_at']?></td>
                                       <td>
                                           <?php

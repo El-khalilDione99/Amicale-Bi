@@ -44,7 +44,15 @@
                                 <tr>
                                     <th scope="row"></th>
                                     <td><?= htmlspecialchars($faqs['nom']) ?></td>
-                                    <td><?= htmlspecialchars($faqs['description']) ?></td>
+
+                                    <span>
+                                        <td data-toggle=" tooltip" data-placement="top" data-html="true"
+                                            title="<?= htmlspecialchars($faqs['description']) ?>">
+                                            <!-- Affichage de la description avec un maximum de 30 caractères -->
+                                            <?= htmlspecialchars(mb_substr($faqs['description'], 0, 30)) . (strlen($faqs['description']) > 30 ? "..." : "") ?>
+                                        </td>
+                                    </span>
+
                                     <td><?= htmlspecialchars($faqs['created_at']) ?></td>
                                     <td>
                                         <?php
